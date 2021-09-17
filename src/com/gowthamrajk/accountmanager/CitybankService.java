@@ -45,7 +45,7 @@ public class CitybankService implements ATM {
 		
 		if(transferAmount <= 0) 
 			throw new InvalidAmountException(invalidErrorMessage);
-		else if(account2.getActiveBalance() < transferAmount) 
+		else if(account1.getActiveBalance() < transferAmount) 
 			throw new InsufficientAmountException(insufficientErrorMessage);
 		else {
 			account1.setActiveBalance(account1.getActiveBalance() - transferAmount); 
